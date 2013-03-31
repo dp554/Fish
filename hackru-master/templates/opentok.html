@@ -15,11 +15,13 @@
           var apiKey = "1273231";
           var sessionId = "{{ s }}";
           var token = "{{ t }}";
+		 // var token2 = "{{ t2 }}";
 
           // Initialize session, set up event listeners, and connect
           var session = TB.initSession(sessionId);
           session.addEventListener('sessionConnected', sessionConnectedHandler);
           session.connect(apiKey, token);
+		 // session.connect(apiKey, token2);
           
           function sessionConnectedHandler(event) {
             var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');

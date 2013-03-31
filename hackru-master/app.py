@@ -27,6 +27,7 @@ def list():
 @app.route('/opentok')
 def test():
   token = opentok_sdk.generate_token(session.session_id)
+ # token2 = opentok_sdk.generate_token(session.session_id)
   return render_template('opentok.html', s=session.session_id, t=token)
 
 if __name__ == '__main__':
